@@ -2,6 +2,10 @@
  * @xkx https://github.com/jialezi/img2ipfs/
  */
 $(() => {
+    let api = 'https://ipfs.staging.infura.org:5001/api/v0/add?pin=true';
+
+
+    
     /* 临时粘贴上传 */
     $(document).on('paste', event => {
         let clipboardData = event.clipboardData || window.clipboardData || event.originalEvent.clipboardData;
@@ -67,7 +71,7 @@ $(() => {
  	        }else{
  	        document.querySelector('.container').classList.add('start')
  	        var type = $('#id');
-  	        api = 'https://ipfs.infura.io:5001/api/v0/add?pin=true'
+  	        
             let formData = new FormData();
             formData.append('file', files[i]);
             let randomClass = Date.now().toString(36);
